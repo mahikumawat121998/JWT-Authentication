@@ -8,7 +8,7 @@
  *         - username
  *         - email
  *         - password
- *         -isAdmin
+ *         - isAdmin
  *       properties:
  *         id:
  *           type: string
@@ -24,10 +24,9 @@
  *           type: string
  *           format: password
  *           example: "securePassword123"
- *          isAdmin
- *          type: boolean * 
- *          example: true * 
- * 
+ *         isAdmin:
+ *           type: boolean
+ *           example: true
  */
 
 /**
@@ -57,14 +56,12 @@
  *         description: Internal server error
  */
 
-
-
 /**
  * @swagger
  * /user/login:
  *   post:
- *     summary: login a user
- *     description: login a user
+ *     summary: Login a user
+ *     description: Logs in a user
  *     tags:
  *       - Users
  *     requestBody:
@@ -75,7 +72,7 @@
  *             $ref: '#/components/schemas/User'
  *     responses:
  *       201:
- *         description: User created successfully
+ *         description: User logged in successfully
  *         content:
  *           application/json:
  *             schema:
